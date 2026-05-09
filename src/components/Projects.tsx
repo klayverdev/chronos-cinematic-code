@@ -3,33 +3,33 @@ import { motion } from "framer-motion";
 const projects = [
   {
     n: "01",
-    title: "Backend API Systems",
-    type: "Backend Infrastructure",
-    desc: "RESTful API architectures focused on scalability, organization and clean structure for modern applications.",
+    title: "Sistemas de API Backend",
+    type: "Infraestrutura Backend",
+    desc: "Arquiteturas de API REST focadas em escalabilidade, organização e estrutura limpa para aplicações modernas.",
     stack: ["TypeScript", "Node.js", "MySQL"],
     code: `app.use(authMiddleware);\napp.use(rateLimiter());\n\nrouter.post('/api/auth', handler);`,
   },
   {
     n: "02",
-    title: "GTA RP Systems",
-    type: "Game Backend",
-    desc: "Game systems focused on organization, immersion and persistent multiplayer experiences.",
+    title: "Sistemas GTA RP",
+    type: "Backend de Jogos",
+    desc: "Sistemas de jogo focados em organização, imersão e experiências multiplayer persistentes.",
     stack: ["Lua", "TypeScript", "MySQL"],
     code: `class EconomySystem {\n  async transfer(player, amount) {\n    return validate(player, amount);\n  }\n}`,
   },
   {
     n: "03",
-    title: "Developer Tooling",
-    type: "Automation & CLI",
-    desc: "CLI and automation experiments designed to improve workflow and development productivity.",
+    title: "Ferramentas para Desenvolvedores",
+    type: "Automação e CLI",
+    desc: "Experimentos de CLI e automação projetados para melhorar fluxo de trabalho e produtividade no desenvolvimento.",
     stack: ["Node.js", "JavaScript"],
-    code: `$ create project api\n› installing dependencies...\n✓ environment ready`,
+    code: `$ create project api\n› instalando dependências...\n✓ ambiente pronto`,
   },
   {
     n: "04",
-    title: "Frontend & Web Experiences",
-    type: "Web Interfaces",
-    desc: "Modern web interfaces combining responsiveness, clean UI and performance.",
+    title: "Frontend e Experiências Web",
+    type: "Interfaces Web",
+    desc: "Interfaces web modernas combinando responsividade, UI limpa e performance.",
     stack: ["Next.js", "React", "TypeScript"],
     code: `export default function Home() {\n  return <Interface />;\n}`,
   },
@@ -41,11 +41,11 @@ export function Projects() {
       <div className="px-6 md:px-10">
         <div className="mb-20 grid grid-cols-12 gap-6 items-end">
           <div className="col-span-12 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50">
-            04 — Selected Work
+            04 Trabalhos Selecionados
           </div>
           <h2 className="col-span-12 md:col-span-7 text-display text-5xl md:text-7xl leading-[0.9] text-balance">
-            Projects built<br />
-            <span className="text-editorial text-foreground/50">through evolution.</span>
+            Projetos construídos<br />
+            <span className="text-editorial text-foreground/50">através da evolução.</span>
           </h2>
           <a
             href="https://github.com/klayverdev"
@@ -53,7 +53,7 @@ export function Projects() {
             rel="noreferrer"
             className="col-span-12 md:col-span-3 md:text-right font-mono text-xs tracking-[0.2em] uppercase text-foreground/70 hover:text-foreground transition-colors"
           >
-            View Repository ↗
+            Ver Repositório ↗
           </a>
         </div>
 

@@ -30,14 +30,14 @@ export function Interlude() {
           transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-editorial text-3xl md:text-6xl text-center max-w-5xl leading-[1.1] text-balance"
         >
-          "Discipline is the invisible structure <br className="hidden md:block" />
-          behind every <span className="italic text-foreground/60">great system.</span>"
+          "Disciplina é a estrutura invisível <br className="hidden md:block" />
+          por trás de todo <span className="italic text-foreground/60">grande sistema.</span>"
         </motion.blockquote>
       </div>
 
       <div className="absolute bottom-8 left-6 right-6 md:left-10 md:right-10 flex justify-between font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/60">
-        <span>— INTERLUDE 01</span>
-        <span className="flicker">● TRANSMISSION</span>
+        <span>INTERLÚDIO 01</span>
+        <span className="flicker">● TRANSMISSÃO</span>
       </div>
     </section>
   );

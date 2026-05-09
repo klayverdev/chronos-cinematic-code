@@ -1,8 +1,21 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 export function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const subject = encodeURIComponent(`Contato do portfólio - ${name || email}`);
+    const body = encodeURIComponent(`Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`);
+    window.location.href = `mailto:klayver261@gmail.com?subject=${subject}&body=${body}`;
+    setSent(true);
+  };
+
   return (
     <section id="contact" className="relative bg-background py-32 md:py-48 border-t border-hairline overflow-hidden">
       <div className="absolute inset-0 opacity-30">
@@ -13,16 +26,16 @@ export function Contact() {
 
       <div className="relative px-6 md:px-10 grid grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50">
-          06 — End Credits
+          06 Créditos Finais
         </div>
 
         <div className="col-span-12 md:col-span-6">
           <h2 className="text-display text-6xl md:text-8xl leading-[0.85] mb-8 text-balance">
-            Let's build<br />
-            <span className="text-editorial text-foreground/60">something meaningful.</span>
+            Vamos construir<br />
+            <span className="text-editorial text-foreground/60">algo significativo.</span>
           </h2>
           <p className="text-foreground/60 max-w-md mb-12 leading-relaxed">
-            Open to opportunities, collaborations and experiences involving backend systems, APIs, web applications and software engineering projects.
+            Aberto a oportunidades, colaborações e experiências envolvendo sistemas backend, APIs, aplicações web e projetos de engenharia de software.
           </p>
 
           <div className="space-y-4 font-mono text-sm">
@@ -45,15 +58,15 @@ export function Contact() {
               <span className="group-hover:translate-x-1 transition-transform">klayver-oliveira ↗</span>
             </a>
             <div className="group flex items-center justify-between border-b border-hairline pb-3">
-              <span className="tracking-[0.2em] uppercase text-foreground/50">Location</span>
-              <span>Tocantins, Minas Gerais — Brazil</span>
+              <span className="tracking-[0.2em] uppercase text-foreground/50">Localização</span>
+              <span>Tocantins, Minas Gerais Brasil</span>
             </div>
           </div>
         </div>
 
         <div className="col-span-12 md:col-span-4 md:pl-8">
           <motion.form
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -61,19 +74,39 @@ export function Contact() {
             className="glass p-6 md:p-8 space-y-5"
           >
             <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50 mb-2">
-              // TRANSMISSION
+              // TRANSMISSÃO
             </div>
             <div className="space-y-1">
-              <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Name</label>
-              <input required className="w-full bg-transparent border-b border-hairline focus:border-foreground outline-none py-2 text-foreground" />
+              <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Nome</label>
+              <input
+                required
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                placeholder="Seu nome"
+                className="w-full bg-transparent border-b border-hairline focus:border-foreground outline-none py-2 text-foreground"
+              />
             </div>
             <div className="space-y-1">
-              <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Channel</label>
-              <input required type="email" className="w-full bg-transparent border-b border-hairline focus:border-foreground outline-none py-2 text-foreground" />
+              <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Canal</label>
+              <input
+                required
+                type="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder="seu@email.com"
+                className="w-full bg-transparent border-b border-hairline focus:border-foreground outline-none py-2 text-foreground"
+              />
             </div>
             <div className="space-y-1">
-              <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Message</label>
-              <textarea required rows={4} className="w-full bg-transparent border-b border-hairline focus:border-foreground outline-none py-2 text-foreground resize-none" />
+              <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Mensagem</label>
+              <textarea
+                required
+                rows={4}
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                placeholder="Escreva sua mensagem aqui"
+                className="w-full bg-transparent border-b border-hairline focus:border-foreground outline-none py-2 text-foreground resize-none"
+              />
             </div>
             <button
               type="submit"
@@ -81,7 +114,7 @@ export function Contact() {
             >
               <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               <span className="relative group-hover:text-background transition-colors duration-500">
-                {sent ? "● SIGNAL SENT" : "Transmit Signal"}
+                {sent ? "● SINAL ENVIADO" : "Transmitir Sinal"}
               </span>
             </button>
           </motion.form>
@@ -89,9 +122,9 @@ export function Contact() {
       </div>
 
       <div className="relative mt-24 px-6 md:px-10 flex flex-col md:flex-row justify-between gap-4 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/40 border-t border-hairline pt-8">
-        <span>© KLAYVER OLIVEIRA — MMXXVI</span>
-        <span>FIN — END OF TRANSMISSION</span>
-        <span>BUILT THROUGH DISCIPLINE</span>
+        <span>© Klayver Oliveira MMXXVI</span>
+        <span>FIM TRANSMISSÃO ENCERRADA</span>
+        <span>CONSTRUÍDO COM DISCIPLINA</span>
       </div>
     </section>
   );

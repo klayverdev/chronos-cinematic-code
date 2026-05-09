@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 
 const tech = [
-  { n: "TypeScript", c: "TS", d: "Type-safe development" },
-  { n: "Node.js", c: "ND", d: "Backend runtime systems" },
-  { n: "Next.js", c: "NX", d: "Modern full-stack architecture" },
-  { n: "APIs", c: "AP", d: "RESTful systems and integrations" },
+  { n: "TypeScript", c: "TS", d: "Desenvolvimento com tipagem" },
+  { n: "Node.js", c: "ND", d: "Sistemas de runtime backend" },
+  { n: "Next.js", c: "NX", d: "Arquitetura full-stack moderna" },
+  { n: "APIs", c: "AP", d: "Sistemas RESTful e integrações" },
   { n: "Databases", c: "DB", d: "MySQL · Supabase" },
-  { n: "Python", c: "PY", d: "Automation and logic building" },
-  { n: "GitHub", c: "GH", d: "Version control and collaboration" },
-  { n: "JavaScript", c: "JS", d: "Core web foundations" },
-  { n: "React", c: "RE", d: "Modern interactive interfaces" },
-  { n: "Lua", c: "LU", d: "Game systems and scripting" },
+  { n: "Python", c: "PY", d: "Automação e construção de lógica" },
+  { n: "GitHub", c: "GH", d: "Controle de versão e colaboração" },
+  { n: "JavaScript", c: "JS", d: "Fundamentos web" },
+  { n: "React", c: "RE", d: "Interfaces interativas modernas" },
+  { n: "Lua", c: "LU", d: "Sistemas de jogo e scripting" },
 ];
 
 export function Stack() {
@@ -20,15 +20,15 @@ export function Stack() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50 mb-4">
-              03 — Arsenal
+              03 Arsenal
             </div>
             <h2 className="text-display text-5xl md:text-7xl leading-[0.9] text-balance">
-              Tools forged<br />
-              <span className="text-editorial text-foreground/50">through consistency.</span>
+              Ferramentas forjadas<br />
+              <span className="text-editorial text-foreground/50">através da consistência.</span>
             </h2>
           </div>
           <p className="font-mono text-xs tracking-[0.15em] uppercase text-foreground/50 max-w-xs">
-            // The stack isn't just technology — it's repetition, discipline and evolution.
+            // A stack não é apenas tecnologia é repetição, disciplina e evolução.
           </p>
         </div>
 

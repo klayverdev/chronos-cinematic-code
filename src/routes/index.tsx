@@ -14,10 +14,10 @@ import { Contact } from "@/components/Contact";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Klayver Oliveira — Backend Engineer / System Architect" },
-      { name: "description", content: "Cinematic portfolio of Klayver Oliveira — backend engineer building APIs, infrastructure and systems that scale." },
-      { property: "og:title", content: "Klayver Oliveira — Backend Engineer" },
-      { property: "og:description", content: "Code. Build. Repeat. A futuristic portfolio in the dark." },
+      { title: "Klayver Oliveira Engenheiro Backend / Arquiteto de Sistemas" },
+      { name: "description", content: "Portfólio cinematográfico de Klayver Oliveira engenheiro backend construindo APIs, infraestrutura e sistemas escaláveis." },
+      { property: "og:title", content: "Klayver Oliveira Engenheiro Backend" },
+      { property: "og:description", content: "Código. Construir. Repetir. Um portfólio futurista no escuro." },
       { property: "og:type", content: "website" },
     ],
     links: [

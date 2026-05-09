@@ -10,14 +10,14 @@ export function Nav() {
     >
       <div className="flex items-center justify-between px-6 md:px-10 py-5 text-foreground">
         <a href="#top" className="font-mono text-xs tracking-[0.3em] uppercase">
-          K/O — 001
+          K/O 001
         </a>
         <nav className="hidden md:flex items-center gap-8 font-mono text-[10px] tracking-[0.3em] uppercase">
-          <a href="#about" className="hover:opacity-60 transition-opacity">About</a>
-          <a href="#stack" className="hover:opacity-60 transition-opacity">Stack</a>
-          <a href="#work" className="hover:opacity-60 transition-opacity">Work</a>
-          <a href="#timeline" className="hover:opacity-60 transition-opacity">Timeline</a>
-          <a href="#contact" className="hover:opacity-60 transition-opacity">Contact</a>
+          <a href="#about" className="hover:opacity-60 transition-opacity">Sobre</a>
+          <a href="#stack" className="hover:opacity-60 transition-opacity">Tecnologias</a>
+          <a href="#work" className="hover:opacity-60 transition-opacity">Projetos</a>
+          <a href="#timeline" className="hover:opacity-60 transition-opacity">Linha do Tempo</a>
+          <a href="#contact" className="hover:opacity-60 transition-opacity">Contato</a>
         </nav>
         <div className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-70">
           MMXXVI

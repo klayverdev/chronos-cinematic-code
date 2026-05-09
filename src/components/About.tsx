@@ -5,7 +5,7 @@ export function About() {
     <section id="about" className="relative bg-background py-32 md:py-48 overflow-hidden">
       <div className="grid grid-cols-12 gap-6 px-6 md:px-10">
         <div className="col-span-12 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50">
-          02 — Identity
+          02 Identity
         </div>
 
         <div className="col-span-12 md:col-span-5 relative">
@@ -27,7 +27,7 @@ export function About() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/70">
               <span>FRAME 02 / OLIVEIRA, K.</span>
-              <span>● LIVE</span>
+              <span>● AO VIVO</span>
             </div>
           </motion.div>
         </div>
@@ -40,15 +40,15 @@ export function About() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-editorial text-4xl md:text-6xl leading-[1.05] mb-8 text-balance"
           >
-            A quiet obsession with learning, systems and constant evolution.
+            Uma obsessão silenciosa por aprendizado, sistemas e evolução constante.
           </motion.h2>
 
           {[
-            "I'm a Software Engineering student and aspiring backend engineer focused on APIs, web systems and the invisible structure behind digital experiences.",
-            "I started programming in 2025, driven by curiosity, discipline and the desire to transform ideas into real functional solutions.",
-            "My journey is built on continuous learning — combining academic studies, hands-on projects and constant experimentation with modern technologies.",
-            "From backend architectures to GTA RP systems and developer tools, I focus on creating scalable, organized and functional experiences.",
-            "Every project is another frame in a longer story.",
+            "Sou estudante de Engenharia de Software e aspirante a engenheiro backend, focado em APIs, sistemas web e na estrutura invisível por trás das experiências digitais.",
+            "Comecei a programar em 2025, movido por curiosidade, disciplina e o desejo de transformar ideias em soluções funcionais.",
+            "Minha jornada é construída em aprendizado contínuo combinando estudos acadêmicos, projetos práticos e experimentação constante com tecnologias modernas.",
+            "De arquiteturas backend a sistemas de GTA RP e ferramentas para desenvolvedores, foco em criar experiências escaláveis, organizadas e funcionais.",
+            "Cada projeto é mais um quadro em uma história maior.",
           ].map((t, i) => (
             <motion.p
               key={i}
@@ -64,9 +64,9 @@ export function About() {
 
           <div className="mt-8 grid grid-cols-3 gap-6 font-mono text-[10px] tracking-[0.2em] uppercase">
             {[
-              { k: "Focus", v: "Backend / APIs / Systems" },
-              { k: "Stack", v: "TypeScript · Node.js · Next.js" },
-              { k: "Status", v: "Always Learning · Always Building" },
+              { k: "Foco", v: "Backend / APIs / Sistemas" },
+              { k: "Tecnologia", v: "TypeScript · Node.js · Next.js" },
+              { k: "Status", v: "Sempre Aprendendo · Sempre Construindo" },
             ].map((s) => (
               <div key={s.k} className="border-t border-hairline pt-3">
                 <div className="text-foreground/40 mb-1">{s.k}</div>

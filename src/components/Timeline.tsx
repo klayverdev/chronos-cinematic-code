@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 const events = [
-  { year: "2025", title: "First Line of Code", desc: "Programming stopped being curiosity and became direction. Beginning the journey through logic, systems and development fundamentals." },
-  { year: "2025", title: "Backend Discovery", desc: "Started exploring APIs, databases and backend architecture — discovering passion for systems users never directly see." },
-  { year: "2026", title: "Software Engineering", desc: "Started Bachelor's Degree in Software Engineering at UNIGRANDE — transforming curiosity into structured technical growth." },
-  { year: "2026", title: "Harvard CS50 AI", desc: "Completed Harvard University's CS50 Introduction to Artificial Intelligence with Python, expanding foundations in AI concepts and problem solving." },
-  { year: "NOW", title: "Always Building", desc: "Every project compounds experience. Every line of code becomes part of a larger system. Code. Build. Repeat." },
+  { year: "2025", title: "Primeira Linha de Código", desc: "A programação deixou de ser curiosidade e se tornou direção. Iniciando a jornada por lógica, sistemas e fundamentos de desenvolvimento." },
+  { year: "2025", title: "Descoberta do Backend", desc: "Começou a explorar APIs, bancos de dados e arquitetura backend descobrindo paixão por sistemas que o usuário nunca vê diretamente." },
+  { year: "2026", title: "Engenharia de Software", desc: "Iniciou o curso de Bacharelado em Engenharia de Software na UNIGRANDE transformando curiosidade em crescimento técnico estruturado." },
+  { year: "2026", title: "Harvard CS50 AI", desc: "Concluiu o curso Introdução à Inteligência Artificial com Python da Universidade de Harvard, expandindo fundamentos em conceitos de IA e resolução de problemas." },
+  { year: "NOW", title: "Sempre Construindo", desc: "Cada projeto acumula experiência. Cada linha de código torna-se parte de um sistema maior. Código. Construir. Repetir." },
 ];
 
 export function Timeline() {
@@ -14,11 +14,11 @@ export function Timeline() {
       <div className="px-6 md:px-10">
         <div className="mb-20 grid grid-cols-12 gap-6 items-end">
           <div className="col-span-12 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50">
-            05 — Chronology
+            05 Cronologia
           </div>
           <h2 className="col-span-12 md:col-span-10 text-display text-5xl md:text-7xl leading-[0.9] text-balance">
-            A documentary<br />
-            <span className="text-editorial text-foreground/50">in progress.</span>
+            Um documentário<br />
+            <span className="text-editorial text-foreground/50">em andamento.</span>
           </h2>
         </div>
 
@@ -35,7 +35,7 @@ export function Timeline() {
             >
               <div className={`pl-12 md:pl-0 ${i % 2 ? "md:pl-12 md:text-left" : "md:pr-12 md:text-right"}`}>
                 <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50 mb-2">
-                  CHAPTER {String(i + 1).padStart(2, "0")}
+                  CAPÍTULO {String(i + 1).padStart(2, "0")}
                 </div>
                 <div className="text-display text-5xl md:text-7xl mb-3">{e.year}</div>
                 <h3 className="text-editorial text-2xl mb-2">{e.title}</h3>
