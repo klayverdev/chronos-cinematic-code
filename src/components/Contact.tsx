@@ -77,8 +77,10 @@ export function Contact() {
               // TRANSMISSÃO
             </div>
             <div className="space-y-1">
-              <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Nome</label>
+              <label htmlFor="contact-name" className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Nome</label>
               <input
+                id="contact-name"
+                name="name"
                 required
                 value={name}
                 onChange={(event) => setName(event.target.value)}
@@ -87,8 +89,10 @@ export function Contact() {
               />
             </div>
             <div className="space-y-1">
-              <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Canal</label>
+              <label htmlFor="contact-email" className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Canal</label>
               <input
+                id="contact-email"
+                name="email"
                 required
                 type="email"
                 value={email}
@@ -98,8 +102,10 @@ export function Contact() {
               />
             </div>
             <div className="space-y-1">
-              <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Mensagem</label>
+              <label htmlFor="contact-message" className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Mensagem</label>
               <textarea
+                id="contact-message"
+                name="message"
                 required
                 rows={4}
                 value={message}
