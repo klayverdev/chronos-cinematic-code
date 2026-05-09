@@ -40,13 +40,15 @@ export function About() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-editorial text-4xl md:text-6xl leading-[1.05] mb-8 text-balance"
           >
-            A quiet obsession with systems that don't break.
+            A quiet obsession with learning, systems and constant evolution.
           </motion.h2>
 
           {[
-            "I'm a software engineering student and backend engineer building APIs, infrastructure, and the unseen machinery behind digital experiences.",
-            "I believe in clean architecture, deliberate design and the slow compounding of discipline. Each commit is a frame in a longer film.",
-            "From GTA RP systems to scalable APIs — I architect what users never see, but always feel.",
+            "I'm a Software Engineering student and aspiring backend engineer focused on APIs, web systems and the invisible structure behind digital experiences.",
+            "I started programming in 2025, driven by curiosity, discipline and the desire to transform ideas into real functional solutions.",
+            "My journey is built on continuous learning — combining academic studies, hands-on projects and constant experimentation with modern technologies.",
+            "From backend architectures to GTA RP systems and developer tools, I focus on creating scalable, organized and functional experiences.",
+            "Every project is another frame in a longer story.",
           ].map((t, i) => (
             <motion.p
               key={i}
@@ -62,9 +64,9 @@ export function About() {
 
           <div className="mt-8 grid grid-cols-3 gap-6 font-mono text-[10px] tracking-[0.2em] uppercase">
             {[
-              { k: "Focus", v: "Backend / APIs" },
-              { k: "Stack", v: "TS / Node / Docker" },
-              { k: "Status", v: "Always Building" },
+              { k: "Focus", v: "Backend / APIs / Systems" },
+              { k: "Stack", v: "TypeScript · Node.js · Next.js" },
+              { k: "Status", v: "Always Learning · Always Building" },
             ].map((s) => (
               <div key={s.k} className="border-t border-hairline pt-3">
                 <div className="text-foreground/40 mb-1">{s.k}</div>

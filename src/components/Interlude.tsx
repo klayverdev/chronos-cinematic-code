@@ -30,8 +30,8 @@ export function Interlude() {
           transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-editorial text-3xl md:text-6xl text-center max-w-5xl leading-[1.1] text-balance"
         >
-          "Discipline is the silent architecture <br className="hidden md:block" />
-          beneath everything <span className="italic text-foreground/60">we build.</span>"
+          "Discipline is the invisible structure <br className="hidden md:block" />
+          behind every <span className="italic text-foreground/60">great system.</span>"
         </motion.blockquote>
       </div>
 
