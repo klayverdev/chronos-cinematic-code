@@ -1,10 +1,19 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
+  "functions": {
+    "api/index.ts": {
+      "maxDuration": 60,
+      "memory": 512
+    }
+  },
   "rewrites": [
     {
+      "source": "/assets/(.*)",
+      "destination": "/dist/client/assets/$1"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/api"
     }
   ]
 }
