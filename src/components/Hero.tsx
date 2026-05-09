@@ -81,12 +81,40 @@ export function Hero() {
         </motion.div>
 
         <h1 className="text-display text-[14vw] md:text-[11vw] leading-[0.82] text-balance">
-          KLAYVER
+          {"KLAYVER".split("").map((c, i) => (
+            <motion.span
+              key={`klayver-${i}`}
+              initial={{ y: "110%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: 1 + i * 0.05,
+                duration: 1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="inline-block"
+            >
+              {c}
+            </motion.span>
+          ))}
 
           <br />
 
           <span className="text-editorial text-foreground/50 text-[12vw] md:text-[9vw]">
-            Oliveira.
+            {"Oliveira.".split("").map((c, i) => (
+              <motion.span
+                key={`oliveira-${i}`}
+                initial={{ y: "110%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  delay: 1.4 + i * 0.05,
+                  duration: 1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="inline-block"
+              >
+                {c === " " ? "\u00A0" : c}
+              </motion.span>
+            ))}
           </span>
         </h1>
 
