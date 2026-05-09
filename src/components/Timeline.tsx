@@ -26,7 +26,7 @@ export function Timeline() {
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-hairline" />
           {events.map((e, i) => (
             <motion.div
-              key={e.year}
+              key={`${e.year}-${i}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}

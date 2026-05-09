@@ -69,6 +69,7 @@
   }
 
   html, body {
+    position: relative;
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-display);

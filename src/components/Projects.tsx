@@ -14,7 +14,7 @@ const projects = [
     title: "Sistemas GTA RP",
     type: "Backend de Jogos",
     desc: "Sistemas de jogo focados em organização, imersão e experiências multiplayer persistentes.",
-    stack: ["Lua", "TypeScript", "MySQL"],
+    stack: ["Lua", "MariaDB"],
     code: `class EconomySystem {\n  async transfer(player, amount) {\n    return validate(player, amount);\n  }\n}`,
   },
   {
