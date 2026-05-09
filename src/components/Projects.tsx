@@ -3,35 +3,35 @@ import { motion } from "framer-motion";
 const projects = [
   {
     n: "01",
-    title: "Atlas API",
+    title: "Backend API Systems",
     type: "Backend Infrastructure",
-    desc: "Distributed REST architecture handling auth, rate-limiting and observability for high-throughput services.",
-    stack: ["Node", "Postgres", "Redis", "Docker"],
-    code: `app.use(rateLimiter({\n  window: '1m',\n  max: 1000,\n}));\n\nrouter.post('/auth', authMiddleware, handler);`,
+    desc: "RESTful API architectures focused on scalability, organization and clean structure for modern applications.",
+    stack: ["TypeScript", "Node.js", "MySQL"],
+    code: `app.use(authMiddleware);\napp.use(rateLimiter());\n\nrouter.post('/api/auth', handler);`,
   },
   {
     n: "02",
-    title: "RP Core Systems",
-    type: "GTA RP Backend",
-    desc: "Persistent world systems — economy, inventory, factions — engineered for thousands of concurrent players.",
-    stack: ["TypeScript", "MySQL", "WebSocket"],
-    code: `class Economy {\n  async transfer(from, to, amt) {\n    return tx(async (t) => {\n      await debit(from, amt, t);\n      await credit(to, amt, t);\n    });\n  }\n}`,
+    title: "GTA RP Systems",
+    type: "Game Backend",
+    desc: "Game systems focused on organization, immersion and persistent multiplayer experiences.",
+    stack: ["Lua", "TypeScript", "MySQL"],
+    code: `class EconomySystem {\n  async transfer(player, amount) {\n    return validate(player, amount);\n  }\n}`,
   },
   {
     n: "03",
-    title: "CLI Forge",
-    type: "Developer Tooling",
-    desc: "Modular command-line toolkit for scaffolding, automation and pipeline orchestration across teams.",
-    stack: ["Node", "Commander", "Bun"],
-    code: `$ forge init --template=api\n› scaffolding modules...\n› installing deps...\n✓ ready in 1.2s`,
+    title: "Developer Tooling",
+    type: "Automation & CLI",
+    desc: "CLI and automation experiments designed to improve workflow and development productivity.",
+    stack: ["Node.js", "JavaScript"],
+    code: `$ create project api\n› installing dependencies...\n✓ environment ready`,
   },
   {
     n: "04",
-    title: "Sentinel Auth",
-    type: "Security Layer",
-    desc: "JWT/OAuth gateway with session rotation, anomaly detection and zero-trust verification.",
-    stack: ["TypeScript", "Crypto", "Redis"],
-    code: `const token = await jwt.sign(payload, KEY, {\n  algorithm: 'EdDSA',\n  expiresIn: '15m',\n});`,
+    title: "Frontend & Web Experiences",
+    type: "Web Interfaces",
+    desc: "Modern web interfaces combining responsiveness, clean UI and performance.",
+    stack: ["Next.js", "React", "TypeScript"],
+    code: `export default function Home() {\n  return <Interface />;\n}`,
   },
 ];
 
@@ -44,8 +44,8 @@ export function Projects() {
             04 — Selected Work
           </div>
           <h2 className="col-span-12 md:col-span-7 text-display text-5xl md:text-7xl leading-[0.9] text-balance">
-            Systems shipped<br />
-            <span className="text-editorial text-foreground/50">in silence.</span>
+            Projects built<br />
+            <span className="text-editorial text-foreground/50">through evolution.</span>
           </h2>
           <a
             href="https://github.com/klayverdev"

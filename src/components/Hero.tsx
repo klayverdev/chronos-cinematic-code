@@ -59,7 +59,7 @@ export function Hero() {
           transition={{ delay: 0.8, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="font-mono text-[10px] md:text-xs tracking-[0.4em] uppercase text-foreground/70 mb-6"
         >
-          — Backend Engineer / System Architect
+          — Backend Engineer / Software Engineering Student
         </motion.div>
 
         <h1 className="text-display text-[14vw] md:text-[11vw] leading-[0.82] text-balance">
@@ -97,7 +97,7 @@ export function Hero() {
           className="mt-8 flex flex-col md:flex-row md:items-end md:justify-between gap-6"
         >
           <p className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase text-foreground/70 max-w-md">
-            Code. Build. Repeat. — Architecting systems that scale beyond the visible.
+            Code. Build. Repeat. — Architecting digital systems through discipline, curiosity and continuous evolution.
           </p>
           <div className="flex items-center gap-3 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50">
             <span className="w-8 h-px bg-foreground/40" />

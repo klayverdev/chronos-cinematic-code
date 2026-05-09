@@ -19,10 +19,10 @@ export function Contact() {
         <div className="col-span-12 md:col-span-6">
           <h2 className="text-display text-6xl md:text-8xl leading-[0.85] mb-8 text-balance">
             Let's build<br />
-            <span className="text-editorial text-foreground/60">something quiet.</span>
+            <span className="text-editorial text-foreground/60">something meaningful.</span>
           </h2>
           <p className="text-foreground/60 max-w-md mb-12 leading-relaxed">
-            Open to collaborations on backend systems, APIs and infrastructure. The best work happens in the dark.
+            Open to opportunities, collaborations and experiences involving backend systems, APIs, web applications and software engineering projects.
           </p>
 
           <div className="space-y-4 font-mono text-sm">
@@ -44,13 +44,10 @@ export function Contact() {
               <span className="tracking-[0.2em] uppercase text-foreground/50">LinkedIn</span>
               <span className="group-hover:translate-x-1 transition-transform">klayver-oliveira ↗</span>
             </a>
-            <a
-              href="mailto:hello@klayver.dev"
-              className="group flex items-center justify-between border-b border-hairline pb-3 hover:border-foreground transition-colors"
-            >
-              <span className="tracking-[0.2em] uppercase text-foreground/50">Email</span>
-              <span className="group-hover:translate-x-1 transition-transform">hello@klayver.dev ↗</span>
-            </a>
+            <div className="group flex items-center justify-between border-b border-hairline pb-3">
+              <span className="tracking-[0.2em] uppercase text-foreground/50">Location</span>
+              <span>Tocantins, Minas Gerais — Brazil</span>
+            </div>
           </div>
         </div>
 
@@ -94,7 +91,7 @@ export function Contact() {
       <div className="relative mt-24 px-6 md:px-10 flex flex-col md:flex-row justify-between gap-4 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/40 border-t border-hairline pt-8">
         <span>© KLAYVER OLIVEIRA — MMXXVI</span>
         <span>FIN — END OF TRANSMISSION</span>
-        <span>BUILT IN THE DARK</span>
+        <span>BUILT THROUGH DISCIPLINE</span>
       </div>
     </section>
   );

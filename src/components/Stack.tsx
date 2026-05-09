@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 
 const tech = [
-  { n: "TypeScript", c: "TS", d: "Type-safe systems" },
-  { n: "Node.js", c: "ND", d: "Runtime architecture" },
-  { n: "APIs", c: "AP", d: "REST · GraphQL · RPC" },
-  { n: "Databases", c: "DB", d: "Postgres · Mongo · Redis" },
-  { n: "Authentication", c: "AU", d: "OAuth · JWT · Sessions" },
-  { n: "Docker", c: "DK", d: "Containers · Orchestration" },
-  { n: "GitHub", c: "GH", d: "Version control · CI/CD" },
-  { n: "Backend Systems", c: "BS", d: "Distributed architecture" },
-  { n: "Security", c: "SC", d: "Hardening · Encryption" },
-  { n: "Next.js", c: "NX", d: "Full-stack React" },
+  { n: "TypeScript", c: "TS", d: "Type-safe development" },
+  { n: "Node.js", c: "ND", d: "Backend runtime systems" },
+  { n: "Next.js", c: "NX", d: "Modern full-stack architecture" },
+  { n: "APIs", c: "AP", d: "RESTful systems and integrations" },
+  { n: "Databases", c: "DB", d: "MySQL · Supabase" },
+  { n: "Python", c: "PY", d: "Automation and logic building" },
+  { n: "GitHub", c: "GH", d: "Version control and collaboration" },
+  { n: "JavaScript", c: "JS", d: "Core web foundations" },
+  { n: "React", c: "RE", d: "Modern interactive interfaces" },
+  { n: "Lua", c: "LU", d: "Game systems and scripting" },
 ];
 
 export function Stack() {
@@ -24,11 +24,11 @@ export function Stack() {
             </div>
             <h2 className="text-display text-5xl md:text-7xl leading-[0.9] text-balance">
               Tools forged<br />
-              <span className="text-editorial text-foreground/50">into instinct.</span>
+              <span className="text-editorial text-foreground/50">through consistency.</span>
             </h2>
           </div>
           <p className="font-mono text-xs tracking-[0.15em] uppercase text-foreground/50 max-w-xs">
-            // The stack isn't a list — it's a discipline.
+            // The stack isn't just technology — it's repetition, discipline and evolution.
           </p>
         </div>
 

@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 
 const events = [
-  { year: "2020", title: "First Line of Code", desc: "Curiosity becomes obsession. Discovered programming and never looked back." },
-  { year: "2022", title: "Backend Awakening", desc: "Fell into the world of APIs, databases and the invisible architecture of the web." },
-  { year: "2023", title: "Software Engineering", desc: "Began formal studies — turning intuition into systems thinking." },
-  { year: "2024", title: "GTA RP Systems", desc: "Architected scalable persistent world systems, learning to build for thousands of concurrent users." },
-  { year: "2025", title: "API Architect", desc: "Refined craft around clean architecture, security and distributed systems." },
-  { year: "NOW", title: "Always Building", desc: "Code. Build. Repeat. The discipline compounds. The story continues." },
+  { year: "2025", title: "First Line of Code", desc: "Programming stopped being curiosity and became direction. Beginning the journey through logic, systems and development fundamentals." },
+  { year: "2025", title: "Backend Discovery", desc: "Started exploring APIs, databases and backend architecture — discovering passion for systems users never directly see." },
+  { year: "2026", title: "Software Engineering", desc: "Started Bachelor's Degree in Software Engineering at UNIGRANDE — transforming curiosity into structured technical growth." },
+  { year: "2026", title: "Harvard CS50 AI", desc: "Completed Harvard University's CS50 Introduction to Artificial Intelligence with Python, expanding foundations in AI concepts and problem solving." },
+  { year: "NOW", title: "Always Building", desc: "Every project compounds experience. Every line of code becomes part of a larger system. Code. Build. Repeat." },
 ];
 
 export function Timeline() {
