@@ -103,7 +103,7 @@ const stack = {
 <img src="https://user-images.githubusercontent.com/74038190/213910845-af37a709-8995-40d6-be59-724526e3c3d7.gif" width="100%"/>
 
 ```bash
-> process.exit(0)   //  see you in the commits.
+
 ```
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:39FF14,50:0a0a0a,100:000000&height=120&section=footer&animation=fadeIn"/>
