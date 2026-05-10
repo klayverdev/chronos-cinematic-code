@@ -98,53 +98,6 @@ const stack = {
 
 ---
 
-## `> snake --watch contributions`
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/klayverdev/klayverdev/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/klayverdev/klayverdev/output/github-contribution-grid-snake.svg"/>
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/klayverdev/klayverdev/output/github-contribution-grid-snake.svg" width="100%"/>
-</picture>
-
-</div>
-
-<details>
-<summary><code>$ snake --setup</code></summary>
-
-Crie `.github/workflows/snake.yml` no repositório `klayverdev/klayverdev`:
-
-```yaml
-name: Generate Snake
-on:
-  schedule:
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: klayverdev
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
-
-Depois: **Actions → Generate Snake → Run Workflow**
-
-</details>
-
----
-
 <div align="center">
 
 <img src="https://user-images.githubusercontent.com/74038190/213910845-af37a709-8995-40d6-be59-724526e3c3d7.gif" width="100%"/>
