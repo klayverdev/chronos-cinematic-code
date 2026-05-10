@@ -72,10 +72,6 @@ const stack = {
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=klayverdev&show_icons=true&theme=chartreuse-dark&bg_color=010101&border_color=39FF14&icon_color=39FF14&title_color=39FF14&text_color=cccccc&hide_border=false&count_private=true&include_all_commits=true&rank_icon=github" height="180"/>
-&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=klayverdev&layout=compact&theme=chartreuse-dark&bg_color=010101&border_color=39FF14&title_color=39FF14&text_color=cccccc&hide_border=false&langs_count=8" height="180"/>
-
 <br/><br/>
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=klayverdev&theme=dark&background=010101&border=39FF14&ring=39FF14&fire=39FF14&currStreakLabel=39FF14&sideLabels=39FF14&dates=888888&stroke=39FF14" width="70%"/>
