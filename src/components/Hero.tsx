@@ -27,7 +27,7 @@ export function Hero() {
           muted
           loop
           playsInline
-          className="w-[70%] h-[70%] object-contain opacity-90"
+          className="w-full h-full object-cover opacity-95"
           src="/videos/portrait-1.mp4"
         />
       </motion.div>
