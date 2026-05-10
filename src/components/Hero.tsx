@@ -27,7 +27,7 @@ export function Hero() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover opacity-95"
+          className="w-[80%] h-[85%] object-cover opacity-95"
           style={{ objectPosition: "center 40%" }}
           src="/videos/portrait-1.mp4"
         />
