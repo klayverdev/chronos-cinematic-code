@@ -22,7 +22,7 @@ const klayver = {
   location:   "Brasil 🇧🇷",
   education:  "Bacharelado em Engenharia de Software · UNIGRANDE",
   cert:       "Harvard CS50 · Introduction to AI with Python",
-  focus:      ["APIs escaláveis", "Arquitetura backend", "Sistemas persistentes"],
+  focus:      ["Arquitetura backend", "Sistemas persistentes"],
   motto:      "Código. Construir. Repetir.",
   status:     "always building 🟢"
 } as const;
