@@ -28,7 +28,7 @@ export function Hero() {
           loop
           playsInline
           className="w-full h-full object-cover opacity-95"
-          style={{ objectPosition: "center 25%" }}
+          style={{ objectPosition: "center 40%" }}
           src="/videos/portrait-1.mp4"
         />
       </motion.div>
