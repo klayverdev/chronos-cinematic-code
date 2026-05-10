@@ -98,25 +98,6 @@ const stack = {
 
 ---
 
-## `> ls -la ./repos`
-
-```bash
-drwxr-xr-x  sistemas-de-api-backend       [TypeScript · Node.js · MySQL]
-drwxr-xr-x  sistemas-gta-rp               [Lua · MariaDB]
-drwxr-xr-x  ferramentas-para-devs         [Node.js · CLI · Automation]
-drwxr-xr-x  frontend-e-experiencias-web   [Next.js · React · TypeScript]
-```
-
-<div align="center">
-
-[![api](https://github-readme-stats.vercel.app/api/pin/?username=klayverdev&repo=sistemas-de-api-backend&theme=chartreuse-dark&bg_color=010101&border_color=39FF14&title_color=39FF14&text_color=cccccc&icon_color=39FF14)](https://github.com/klayverdev)
-&nbsp;
-[![gta](https://github-readme-stats.vercel.app/api/pin/?username=klayverdev&repo=sistemas-gta-rp&theme=chartreuse-dark&bg_color=010101&border_color=39FF14&title_color=39FF14&text_color=cccccc&icon_color=39FF14)](https://github.com/klayverdev)
-
-</div>
-
----
-
 ## `> snake --watch contributions`
 
 <div align="center">
