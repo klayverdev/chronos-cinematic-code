@@ -1,11 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "portfolio-klayveroliveira",
+  "main": "src/server.ts",
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "src/server.ts",
-  "build": {
-    "command": "npm run build"
-  },
-  "pages_build_output_dir": "dist"
+  "workers_dev": true,
+  "site": {
+    "bucket": "dist/client"
+  }
 }

@@ -69,6 +69,24 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const url = new URL(request.url);
+      
+      // Handle video files
+      if (url.pathname.startsWith('/videos/')) {
+        // For Cloudflare Workers, videos must be served from the build output
+        // The wrangler deploy already uploads them to /videos/*
+        const videoPath = url.pathname;
+        
+        // Return a redirect to the CDN URL or serve with proper headers
+        return new Response(null, {
+          status: 307,
+          headers: {
+            'Location': videoPath,
+            'Cache-Control': 'public, max-age=31536000',
+          },
+        });
+      }
+      
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
