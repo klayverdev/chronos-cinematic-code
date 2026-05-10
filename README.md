@@ -51,7 +51,7 @@ const klayver = {
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,express,react,python,lua,mysql,supabase,git,github,vscode&theme=dark&perline=12"/>
+<img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,react,python,lua,mysql,supabase,git,github,vscode&theme=dark&perline=12"/>
 
 </div>
 
