@@ -1,150 +1,140 @@
 <div align="center">
 
-```
-██╗  ██╗██╗      █████╗ ██╗   ██╗██╗   ██╗███████╗██████╗
-██║ ██╔╝██║     ██╔══██╗╚██╗ ██╔╝██║   ██║██╔════╝██╔══██╗
-█████╔╝ ██║     ███████║ ╚████╔╝ ██║   ██║█████╗  ██████╔╝
-██╔═██╗ ██║     ██╔══██║  ╚██╔╝  ╚██╗ ██╔╝██╔══╝  ██╔══██╗
-██║  ██╗███████╗██║  ██║   ██║    ╚████╔╝ ███████╗██║  ██║
-╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝     ╚═══╝  ╚══════╝╚═╝  ╚═╝
-```
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=32&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&width=600&lines=klayver.oliveira();+%2F%2F+Backend+Engineer;building+systems+since+2025;code.build.repeat();" alt="Typing SVG" />
 
-### `Engenheiro Backend` · `Estudante de Engenharia de Software` · `Sempre Construindo`
+<br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-klayver--oliveira-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/klayver-oliveira)
-[![GitHub](https://img.shields.io/badge/GitHub-@klayverdev-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/klayverdev)
-[![Localização](https://img.shields.io/badge/📍-Tocantins%2C%20MG%20·%20Brasil-555?style=flat-square)](#)
-[![Status](https://img.shields.io/badge/Status-Sempre%20Aprendendo-00cc66?style=flat-square)](#)
+<img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="400" alt="coding gif"/>
+
+<br/>
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-klayver--oliveira-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/klayver-oliveira)
+[![GitHub](https://img.shields.io/badge/GitHub-@klayverdev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/klayverdev)
+[![Portfólio](https://img.shields.io/badge/Portfólio-klayver.dev-00FF88?style=for-the-badge&logo=vercel&logoColor=black)](#)
 
 </div>
 
 ---
 
-## `> whoami`
-
-```ts
-const klayver = {
-  papel:      "Engenheiro Backend / Estudante de Engenharia de Software",
-  foco:       ["APIs", "Sistemas Web", "Arquitetura Backend"],
-  instituição: "UNIGRANDE — Bacharelado em Engenharia de Software (2026)",
-  certificado: "Harvard CS50 AI — Introdução à IA com Python (2026)",
-  início:      2025,
-  filosofia:  "Disciplina acima da motivação. Consistência cria realidade.",
-};
-```
-
-> Comecei a programar em 2025 movido por curiosidade e disciplina.
-> Hoje construo APIs, sistemas web e a estrutura invisível por trás das experiências digitais.
-> Cada projeto é mais um quadro em uma história maior.
-
----
-
-## `> tech --stack`
+## 🧠 GitHub Stats
 
 <div align="center">
 
-| Categoria | Tecnologias |
-|---|---|
-| **Linguagens** | TypeScript · JavaScript · Python · Lua |
-| **Backend** | Node.js · APIs RESTful · Autenticação · Rate Limiting |
-| **Frontend** | Next.js · React |
-| **Banco de Dados** | MySQL · MariaDB · Supabase |
-| **Ferramentas** | GitHub · Git · CLI Tools |
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=klayverdev&show_icons=true&theme=dark&bg_color=0d1117&border_color=00FF88&icon_color=00FF88&title_color=00FF88&text_color=ffffff&hide_border=false&count_private=true" alt="GitHub Stats"/>
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=klayverdev&layout=compact&theme=dark&bg_color=0d1117&border_color=00FF88&title_color=00FF88&text_color=ffffff&hide_border=false" alt="Top Languages"/>
+
+</div>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=klayverdev&theme=dark&background=0d1117&border=00FF88&ring=00FF88&fire=00FF88&currStreakLabel=00FF88" alt="GitHub Streak"/>
+</div>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,react,js,python,lua,mysql,github,git&theme=dark&perline=5" alt="Tech Stack Icons"/>
 
 </div>
 
 ---
 
-## `> ls ./projetos`
-
-### `/01` — Sistemas de API Backend
-> Arquiteturas de API REST focadas em escalabilidade, organização e estrutura limpa.
-
-```ts
-app.use(authMiddleware);
-app.use(rateLimiter());
-router.post('/api/auth', handler);
-```
-`TypeScript` `Node.js` `MySQL`
-
----
-
-### `/02` — Sistemas GTA RP
-> Sistemas de jogo focados em organização, imersão e experiências multiplayer persistentes.
-
-```lua
-class EconomySystem {
-  async transfer(player, amount) {
-    return validate(player, amount);
-  }
-}
-```
-`Lua` `MariaDB`
-
----
-
-### `/03` — Ferramentas para Desenvolvedores
-> Experimentos de CLI e automação para melhorar fluxo de trabalho e produtividade.
-
-```bash
-$ create project api
-› instalando dependências...
-✓ ambiente pronto
-```
-`Node.js` `JavaScript`
-
----
-
-### `/04` — Frontend e Experiências Web
-> Interfaces web modernas com responsividade, UI limpa e performance.
-
-```tsx
-export default function Home() {
-  return <Interface />;
-}
-```
-`Next.js` `React` `TypeScript`
-
----
-
-## `> cat timeline.log`
-
-```
-[2025] ── Primeira Linha de Código
-         A programação deixou de ser curiosidade e se tornou direção.
-         Lógica, sistemas e fundamentos.
-
-[2025] ── Descoberta do Backend
-         APIs, bancos de dados e arquitetura backend.
-         Paixão pelos sistemas que o usuário nunca vê diretamente.
-
-[2026] ── Engenharia de Software @ UNIGRANDE
-         Curiosidade transformada em crescimento técnico estruturado.
-
-[2026] ── Harvard CS50 AI
-         Introdução à Inteligência Artificial com Python.
-         Fundamentos em IA e resolução de problemas.
-
-[NOW]  ── Sempre Construindo
-         Cada projeto acumula experiência.
-         Cada linha de código torna-se parte de um sistema maior.
-```
-
----
-
-## `> contact --open`
-
-```
-Aberto a: oportunidades · colaborações · projetos de backend · APIs · sistemas web
-```
+## 🔥 Activity
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-@klayverdev-181717?style=for-the-badge&logo=github)](https://github.com/klayverdev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-klayver--oliveira-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/klayver-oliveira)
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=klayverdev&bg_color=0d1117&color=00FF88&line=00FF88&point=ffffff&area=true&hide_border=false&border_color=00FF88" alt="Activity Graph" width="100%"/>
+
+</div>
 
 ---
 
-*`// Código. Construir. Repetir.`*
+## 🐍 Contributions
 
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/klayverdev/klayverdev/output/github-contribution-grid-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/klayverdev/klayverdev/output/github-contribution-grid-snake.svg"/>
+  <img alt="github contribution snake" src="https://raw.githubusercontent.com/klayverdev/klayverdev/output/github-contribution-grid-snake.svg"/>
+</picture>
+
+</div>
+
+> ⚙️ Para ativar o snake: crie o repo `klayverdev/klayverdev`, adicione o workflow abaixo em `.github/workflows/snake.yml` e rode a action manualmente uma vez.
+
+<details>
+<summary><code>snake.yml — clique para expandir</code></summary>
+
+```yaml
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: klayverdev
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+</details>
+
+---
+
+## 🏆 Trophies
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=klayverdev&theme=darkhub&no-bg=true&margin-w=10&margin-h=10&column=6" alt="GitHub Trophies"/>
+
+</div>
+
+---
+
+## 📡 Repos em Destaque
+
+<div align="center">
+
+[![Backend APIs](https://github-readme-stats.vercel.app/api/pin/?username=klayverdev&repo=sistemas-de-api-backend&theme=dark&bg_color=0d1117&border_color=00FF88&title_color=00FF88&text_color=ffffff&icon_color=00FF88)](https://github.com/klayverdev)
+[![GTA RP](https://github-readme-stats.vercel.app/api/pin/?username=klayverdev&repo=sistemas-gta-rp&theme=dark&bg_color=0d1117&border_color=00FF88&title_color=00FF88&text_color=ffffff&icon_color=00FF88)](https://github.com/klayverdev)
+
+</div>
+
+---
+
+## 📊 Profile Views
+
+<div align="center">
+
+<img src="https://komarev.com/ghpvc/?username=klayverdev&color=00FF88&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
+
+<br/><br/>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700" alt="bottom animation"/>
+
+</div>
+
+---
+
+<div align="center">
+  <sub><code>// code.build.repeat() — always learning, always building.</code></sub>
 </div>
