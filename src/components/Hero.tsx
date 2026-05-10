@@ -21,13 +21,13 @@ export function Hero() {
       className="relative h-[120vh] w-full overflow-hidden bg-background"
     >
       {/* Camada de vídeo */}
-      <motion.div style={{ y, scale }} className="absolute inset-0">
+      <motion.div style={{ y, scale }} className="absolute inset-0 flex items-center justify-center">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-[70%] h-[70%] object-contain opacity-90"
           src="/videos/portrait-1.mp4"
         />
       </motion.div>
