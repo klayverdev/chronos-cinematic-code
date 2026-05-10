@@ -59,10 +59,10 @@ const klayver = {
 const stack = {
   primary:    "TypeScript",                       // strict mode, sempre
   runtime:    "Node.js",
-  frameworks: ["Next.js", "Express"],
+  frameworks: ["Next.js"],
   databases:  ["MySQL", "MariaDB", "Supabase"],
-  scripting:  ["Python", "Lua"],
-  tooling:    ["Git", "GitHub Actions", "REST APIs"],
+  scripting:  ["Python", "Lua","TypeScript"],
+  tooling:    ["Git", "GitHub "],
 } as const;
 ```
 
