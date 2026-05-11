@@ -72,7 +72,7 @@ export function Contact() {
             <span className="text-editorial text-foreground/60">algo significativo.</span>
           </h2>
           <p className="text-foreground/60 max-w-md mb-8 leading-relaxed md:text-justify">
-            Aberto a oportunidades, colaborações e experiências envolvendo sistemas backend, APIs, aplicações web e projetos de engenharia de software.
+            Aberto a oportunidades, colaborações e experiências envolvendo sistemas backend, aplicações web e projetos de engenharia de software.
           </p>
 
           <a
