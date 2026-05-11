@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -8,6 +9,8 @@ const projects = [
     desc: "Arquiteturas de API REST focadas em escalabilidade, organização e estrutura limpa para aplicações modernas.",
     stack: ["TypeScript", "Node.js", "MySQL"],
     code: `app.use(authMiddleware);\napp.use(rateLimiter());\n\nrouter.post('/api/auth', handler);`,
+    link: "https://github.com/klayverdev",
+    linkLabel: "GitHub",
   },
   {
     n: "02",
@@ -16,6 +19,8 @@ const projects = [
     desc: "Sistemas de jogo focados em organização, imersão e experiências multiplayer persistentes.",
     stack: ["Lua", "MariaDB"],
     code: `class EconomySystem {\n  async transfer(player, amount) {\n    return validate(player, amount);\n  }\n}`,
+    link: "https://github.com/klayverdev",
+    linkLabel: "GitHub",
   },
   {
     n: "03",
@@ -24,6 +29,8 @@ const projects = [
     desc: "Experimentos de CLI e automação projetados para melhorar fluxo de trabalho e produtividade no desenvolvimento.",
     stack: ["Node.js", "JavaScript"],
     code: `$ create project api\n› instalando dependências...\n✓ ambiente pronto`,
+    link: "https://github.com/klayverdev",
+    linkLabel: "GitHub",
   },
   {
     n: "04",
@@ -32,6 +39,8 @@ const projects = [
     desc: "Interfaces web modernas combinando responsividade, UI limpa e performance.",
     stack: ["Next.js", "React", "TypeScript"],
     code: `export default function Home() {\n  return <Interface />;\n}`,
+    link: "https://portfolio-klayveroliveira.klayveroliveira2020.workers.dev/",
+    linkLabel: "Ver online",
   },
 ];
 
@@ -58,7 +67,7 @@ export function Projects() {
         </div>
 
         <div className="space-y-px bg-border">
-          {projects.map((p, i) => (
+          {projects.map((p) => (
             <motion.article
               key={p.n}
               initial={{ opacity: 0, y: 40 }}
@@ -77,14 +86,26 @@ export function Projects() {
                 <h3 className="text-display text-3xl md:text-5xl mb-4 group-hover:translate-x-2 transition-transform duration-500">
                   {p.title}
                 </h3>
-                <p className="text-foreground/60 max-w-sm">{p.desc}</p>
+                <p className="text-foreground/60 max-w-sm md:text-justify">{p.desc}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {p.stack.map((s) => (
-                    <span key={s} className="font-mono text-[10px] tracking-[0.2em] uppercase border border-hairline px-2 py-1 text-foreground/70">
+                    <span
+                      key={s}
+                      className="font-mono text-[10px] tracking-[0.2em] uppercase border border-hairline px-2 py-1 text-foreground/70"
+                    >
                       {s}
                     </span>
                   ))}
                 </div>
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.25em] uppercase text-foreground/80 hover:text-foreground border-b border-hairline hover:border-foreground pb-1 transition-colors"
+                >
+                  {p.linkLabel}
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
               </div>
               <div className="col-span-12 md:col-span-7">
                 <div className="relative bg-card border border-hairline overflow-hidden">

@@ -1,17 +1,54 @@
 import { motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z
+    .string()
+    .trim()
+    .min(2, { message: "Informe seu nome (mín. 2 caracteres)" })
+    .max(100, { message: "Nome muito longo (máx. 100)" }),
+  email: z
+    .string()
+    .trim()
+    .email({ message: "E-mail inválido" })
+    .max(255, { message: "E-mail muito longo" }),
+  message: z
+    .string()
+    .trim()
+    .min(10, { message: "Mensagem muito curta (mín. 10 caracteres)" })
+    .max(1000, { message: "Mensagem muito longa (máx. 1000)" }),
+});
+
+type FieldErrors = Partial<Record<"name" | "email" | "message", string>>;
 
 export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
+  const [errors, setErrors] = useState<FieldErrors>({});
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const subject = encodeURIComponent(`Contato do portfólio - ${name || email}`);
-    const body = encodeURIComponent(`Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`);
+    const result = contactSchema.safeParse({ name, email, message });
+    if (!result.success) {
+      const fieldErrors: FieldErrors = {};
+      for (const issue of result.error.issues) {
+        const key = issue.path[0] as keyof FieldErrors;
+        if (key && !fieldErrors[key]) fieldErrors[key] = issue.message;
+      }
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setErrors({});
+    const data = result.data;
+    const subject = encodeURIComponent(`Contato do portfólio - ${data.name}`);
+    const body = encodeURIComponent(
+      `Nome: ${data.name}\nE-mail: ${data.email}\n\nMensagem:\n${data.message}`,
+    );
     window.location.href = `mailto:klayver261@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
   };
@@ -34,32 +71,41 @@ export function Contact() {
             Vamos construir<br />
             <span className="text-editorial text-foreground/60">algo significativo.</span>
           </h2>
-          <p className="text-foreground/60 max-w-md mb-12 leading-relaxed">
+          <p className="text-foreground/60 max-w-md mb-8 leading-relaxed md:text-justify">
             Aberto a oportunidades, colaborações e experiências envolvendo sistemas backend, APIs, aplicações web e projetos de engenharia de software.
           </p>
+
+          <a
+            href="mailto:klayver261@gmail.com"
+            className="group inline-flex items-center gap-4 border border-foreground/40 hover:border-foreground px-6 py-4 font-mono text-xs tracking-[0.3em] uppercase text-foreground transition-colors mb-12"
+          >
+            <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
+            Entre em contato
+            <span className="group-hover:translate-x-1 transition-transform">↗</span>
+          </a>
 
           <div className="space-y-4 font-mono text-sm">
             <a
               href="https://github.com/klayverdev"
               target="_blank"
               rel="noreferrer"
-              className="group flex items-center justify-between border-b border-hairline pb-3 hover:border-foreground transition-colors"
+              className="group flex items-center justify-between gap-3 border-b border-hairline pb-3 hover:border-foreground transition-colors"
             >
-              <span className="tracking-[0.2em] uppercase text-foreground/50">GitHub</span>
-              <span className="group-hover:translate-x-1 transition-transform">@klayverdev ↗</span>
+              <span className="tracking-[0.2em] uppercase text-foreground/50 shrink-0">GitHub</span>
+              <span className="group-hover:translate-x-1 transition-transform truncate">@klayverdev ↗</span>
             </a>
             <a
               href="https://www.linkedin.com/in/klayver-oliveira"
               target="_blank"
               rel="noreferrer"
-              className="group flex items-center justify-between border-b border-hairline pb-3 hover:border-foreground transition-colors"
+              className="group flex items-center justify-between gap-3 border-b border-hairline pb-3 hover:border-foreground transition-colors"
             >
-              <span className="tracking-[0.2em] uppercase text-foreground/50">LinkedIn</span>
-              <span className="group-hover:translate-x-1 transition-transform">klayver-oliveira ↗</span>
+              <span className="tracking-[0.2em] uppercase text-foreground/50 shrink-0">LinkedIn</span>
+              <span className="group-hover:translate-x-1 transition-transform truncate">klayver-oliveira ↗</span>
             </a>
-            <div className="group flex items-center justify-between border-b border-hairline pb-3">
-              <span className="tracking-[0.2em] uppercase text-foreground/50">Localização</span>
-              <span>Tocantins, Minas Gerais Brasil</span>
+            <div className="group flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-3 border-b border-hairline pb-3">
+              <span className="tracking-[0.2em] uppercase text-foreground/50 shrink-0">Localização</span>
+              <span className="text-right text-xs sm:text-sm break-words">Tocantins, Minas Gerais — Brasil</span>
             </div>
           </div>
         </div>
@@ -67,6 +113,7 @@ export function Contact() {
         <div className="col-span-12 md:col-span-4 md:pl-8">
           <motion.form
             onSubmit={handleSubmit}
+            noValidate
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -82,11 +129,21 @@ export function Contact() {
                 id="contact-name"
                 name="name"
                 required
+                maxLength={100}
                 value={name}
-                onChange={(event) => setName(event.target.value)}
+                onChange={(event) => {
+                  setName(event.target.value);
+                  if (errors.name) setErrors((e) => ({ ...e, name: undefined }));
+                }}
                 placeholder="Seu nome"
+                aria-invalid={!!errors.name}
                 className="w-full bg-transparent border-b border-hairline focus:border-foreground outline-none py-2 text-foreground"
               />
+              {errors.name && (
+                <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-destructive pt-1">
+                  {errors.name}
+                </p>
+              )}
             </div>
             <div className="space-y-1">
               <label htmlFor="contact-email" className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Canal</label>
@@ -95,11 +152,21 @@ export function Contact() {
                 name="email"
                 required
                 type="email"
+                maxLength={255}
                 value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                  if (errors.email) setErrors((e) => ({ ...e, email: undefined }));
+                }}
                 placeholder="seu@email.com"
+                aria-invalid={!!errors.email}
                 className="w-full bg-transparent border-b border-hairline focus:border-foreground outline-none py-2 text-foreground"
               />
+              {errors.email && (
+                <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-destructive pt-1">
+                  {errors.email}
+                </p>
+              )}
             </div>
             <div className="space-y-1">
               <label htmlFor="contact-message" className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/40">Mensagem</label>
@@ -108,11 +175,21 @@ export function Contact() {
                 name="message"
                 required
                 rows={4}
+                maxLength={1000}
                 value={message}
-                onChange={(event) => setMessage(event.target.value)}
+                onChange={(event) => {
+                  setMessage(event.target.value);
+                  if (errors.message) setErrors((e) => ({ ...e, message: undefined }));
+                }}
                 placeholder="Escreva sua mensagem aqui"
+                aria-invalid={!!errors.message}
                 className="w-full bg-transparent border-b border-hairline focus:border-foreground outline-none py-2 text-foreground resize-none"
               />
+              {errors.message && (
+                <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-destructive pt-1">
+                  {errors.message}
+                </p>
+              )}
             </div>
             <button
               type="submit"
@@ -120,7 +197,7 @@ export function Contact() {
             >
               <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               <span className="relative group-hover:text-background transition-colors duration-500">
-                {sent ? "● SINAL ENVIADO" : "Transmitir Sinal"}
+                {sent ? "● SINAL ENVIADO" : "Vamos conversar"}
               </span>
             </button>
           </motion.form>
