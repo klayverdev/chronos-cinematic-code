@@ -56,19 +56,24 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, delay: 0.2 + i * 0.15 }}
-            className="text-foreground/70 mb-5 leading-relaxed max-w-md md:text-justify"
+             className="text-foreground/70 mb-5 leading-relaxed max-w-md"
             >
               {t}
             </motion.p>
           ))}
 
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-hairline">
+          <div className="mt-8 grid grid-cols-3 gap-6 font-mono text-[10px] tracking-[0.2em] uppercase">
             {[
               { k: "Foco", v: "Backend · Sistemas" },
               { k: "Tecnologia", v: "TypeScript · Node.js · Next.js" },
-              { k: "Status", v: "Sempre Construindo" },
-            ].map((s, i) => (
-              <div
+              { k: "Status", v: "Sempre Aprendendo · Sempre Construindo" },
+            ].map((s) => (
+              <div key={s.k} className="border-t border-hairline pt-3">
+                <div className="text-foreground/40 mb-1">{s.k}</div>
+                <div className="text-foreground">{s.v}</div>
+              </div>
+            ))}
+      
                 key={s.k}
                 className="bg-background p-5 md:p-6 group hover:bg-card transition-colors"
               >
