@@ -56,23 +56,42 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, delay: 0.2 + i * 0.15 }}
-              className="text-foreground/70 mb-5 leading-relaxed max-w-md"
+            className="text-foreground/70 mb-5 leading-relaxed max-w-md md:text-justify"
             >
               {t}
             </motion.p>
           ))}
 
-          <div className="mt-8 grid grid-cols-3 gap-6 font-mono text-[10px] tracking-[0.2em] uppercase">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-hairline">
             {[
-              { k: "Foco", v: "Backend / APIs / Sistemas" },
+              { k: "Foco", v: "Backend · APIs · Sistemas" },
               { k: "Tecnologia", v: "TypeScript · Node.js · Next.js" },
-              { k: "Status", v: "Sempre Aprendendo · Sempre Construindo" },
-            ].map((s) => (
-              <div key={s.k} className="border-t border-hairline pt-3">
-                <div className="text-foreground/40 mb-1">{s.k}</div>
-                <div className="text-foreground">{s.v}</div>
+              { k: "Status", v: "Sempre Construindo" },
+            ].map((s, i) => (
+              <div
+                key={s.k}
+                className="bg-background p-5 md:p-6 group hover:bg-card transition-colors"
+              >
+                <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/40 mb-3 flex items-center gap-2">
+                  <span>/{String(i + 1).padStart(2, "0")}</span>
+                  <span>{s.k}</span>
+                </div>
+                <div className="text-display text-xl md:text-2xl leading-tight text-foreground">
+                  {s.v}
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-10">
+            <a
+              href="#contact"
+              className="group inline-flex items-center gap-4 border border-foreground/40 hover:border-foreground px-6 py-4 font-mono text-xs tracking-[0.3em] uppercase text-foreground transition-colors"
+            >
+              <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
+              Vamos conversar
+              <span className="group-hover:translate-x-1 transition-transform">↗</span>
+            </a>
           </div>
         </div>
       </div>
