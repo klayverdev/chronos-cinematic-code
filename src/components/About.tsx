@@ -61,7 +61,6 @@ export function About() {
               {t}
             </motion.p>
           ))}
-
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 border border-hairline divide-y md:divide-y-0 md:divide-x divide-hairline">
            {[
              { k: "Foco", v: "Backend • Sistemas" },
@@ -80,6 +79,7 @@ export function About() {
       <div className="text-display text-2xl md:text-3xl leading-[1.05] tracking-[-0.04em] text-foreground break-words">
         {s.v}
       </div>
-    </div>
+  </div>
   ))}
 </div>
+   
