@@ -62,33 +62,24 @@ export function About() {
             </motion.p>
           ))}
 
-          <div className="mt-8 grid grid-cols-3 gap-6 font-mono text-[10px] tracking-[0.2em] uppercase">
-            {[
-              { k: "Foco", v: "Backend · Sistemas" },
-              { k: "Tecnologia", v: "TypeScript · Node.js · Next.js" },
-              { k: "Status", v: "Sempre Aprendendo · Sempre Construindo" },
-            ].map((s) => (
-              <div key={s.k} className="border-t border-hairline pt-3">
-                <div className="text-foreground/40 mb-1">{s.k}</div>
-                <div className="text-foreground">{s.v}</div>
-              </div>
-            ))}
-      
-                key={s.k}
-                className="bg-background p-5 md:p-6 group hover:bg-card transition-colors"
-              >
-                <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/40 mb-3 flex items-center gap-2">
-                  <span>/{String(i + 1).padStart(2, "0")}</span>
-                  <span>{s.k}</span>
-                </div>
-                <div className="text-display text-xl md:text-2xl leading-tight text-foreground">
-                  {s.v}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 border border-hairline divide-y md:divide-y-0 md:divide-x divide-hairline">
+           {[
+             { k: "Foco", v: "Backend • Sistemas" },
+             { k: "Tecnologia", v: "TypeScript • Node.js • Next.js" },
+             { k: "Status", v: "Sempre Construindo" },
+          ].map((s, i) => (
+         <div
+            key={s.k}
+            className="bg-background p-5 md:p-6"
+         >
+        <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/40 mb-3 flex items-center gap-2">
+        <span>/{String(i + 1).padStart(2, "0")}</span>
+        <span>{s.k}</span>
       </div>
-    </section>
-  );
-}
+
+      <div className="text-display text-2xl md:text-3xl leading-[1.05] tracking-[-0.04em] text-foreground break-words">
+        {s.v}
+      </div>
+    </div>
+  ))}
+</div>
