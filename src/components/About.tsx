@@ -44,7 +44,7 @@ export function About() {
           </motion.h2>
 
           {[
-            "Sou estudante de Engenharia de Software e aspirante a engenheiro backend, focado em APIs, sistemas web e na estrutura invisível por trás das experiências digitais.",
+            "Sou estudante de Engenharia de Software e aspirante a engenheiro backend, focado em sistemas e na estrutura invisível por trás das experiências digitais.",
             "Comecei a programar em 2025, movido por curiosidade, disciplina e o desejo de transformar ideias em soluções funcionais.",
             "Minha jornada é construída em aprendizado contínuo combinando estudos acadêmicos, projetos práticos e experimentação constante com tecnologias modernas.",
             "De arquiteturas backend a sistemas de GTA RP e ferramentas para desenvolvedores, foco em criar experiências escaláveis, organizadas e funcionais.",
@@ -64,7 +64,7 @@ export function About() {
 
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-hairline">
             {[
-              { k: "Foco", v: "Backend · APIs · Sistemas" },
+              { k: "Foco", v: "Backend · Sistemas" },
               { k: "Tecnologia", v: "TypeScript · Node.js · Next.js" },
               { k: "Status", v: "Sempre Construindo" },
             ].map((s, i) => (
@@ -81,17 +81,6 @@ export function About() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-10">
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-4 border border-foreground/40 hover:border-foreground px-6 py-4 font-mono text-xs tracking-[0.3em] uppercase text-foreground transition-colors"
-            >
-              <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
-              Vamos conversar
-              <span className="group-hover:translate-x-1 transition-transform">↗</span>
-            </a>
           </div>
         </div>
       </div>
