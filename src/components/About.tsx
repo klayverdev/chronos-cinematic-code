@@ -14,7 +14,7 @@ export function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-            className="relative aspect-[3/4] overflow-hidden border border-hairline"
+            className="relative aspect-[3/4] max-w-[320px] mx-auto overflow-hidden border border-hairline"
           >
             <video
               autoPlay
@@ -23,6 +23,7 @@ export function About() {
               playsInline
               src="/videos/portrait-2.mp4"
               className="w-full h-full object-cover"
+              style={{ objectPosition: "center 30%" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/70">
