@@ -80,7 +80,12 @@ export function About() {
       <div className="text-display text-2xl md:text-3xl leading-[1.05] tracking-[-0.04em] text-foreground break-words">
         {s.v}
       </div>
-  </div>
-  ))}
-</div>
-   
+          </div>
+        ))}
+      </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
