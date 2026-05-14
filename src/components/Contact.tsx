@@ -66,7 +66,7 @@ export function Contact() {
           06 Créditos Finais
         </div>
 
-        <div className="col-span-12 md:col-span-7 md:col-start-2">
+        <div className="col-span-12 md:col-span-6 md:col-start-2">
           <h2 className="text-display text-6xl md:text-8xl leading-[0.85] mb-8 text-balance">
             Vamos construir<br />
             <span className="text-editorial text-foreground/60">algo significativo.</span>
