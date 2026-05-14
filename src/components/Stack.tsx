@@ -4,7 +4,6 @@ import {
   SiTypescript,
   SiNodedotjs,
   SiNextdotjs,
-  SiPostman,
   SiMysql,
   SiPython,
   SiGithub,
@@ -12,6 +11,7 @@ import {
   SiReact,
   SiLua,
 } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 
 type Tech = { n: string; d: string; Icon: IconType };
 
@@ -19,7 +19,7 @@ const tech: Tech[] = [
   { n: "TypeScript", d: "Desenvolvimento com tipagem", Icon: SiTypescript },
   { n: "Node.js", d: "Sistemas de runtime backend", Icon: SiNodedotjs },
   { n: "Next.js", d: "Arquitetura full-stack moderna", Icon: SiNextdotjs },
-  { n: "APIs", d: "Sistemas RESTful e integrações", Icon: SiPostman },
+  { n: "APIs", d: "Sistemas RESTful e integrações", Icon: TbApi },
   { n: "Databases", d: "MySQL · Supabase", Icon: SiMysql },
   { n: "Python", d: "Automação e construção de lógica", Icon: SiPython },
   { n: "GitHub", d: "Controle de versão e colaboração", Icon: SiGithub },
