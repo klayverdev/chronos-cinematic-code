@@ -42,11 +42,11 @@ export function Timeline() {
   return (
     <section id="timeline" className="relative bg-background py-32 md:py-48 border-t border-hairline overflow-hidden">
       <div className="px-6 md:px-10">
-        <div className="mb-20 md:mb-32 grid grid-cols-12 gap-6 items-end">
-          <div className="col-span-12 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50">
-            05 Cronologia
-          </div>
-          <h2 className="col-span-12 md:col-span-10 text-display text-5xl md:text-7xl leading-[0.9] text-balance">
+        <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50 mb-12 md:mb-20">
+          05 Cronologia
+        </div>
+        <div className="mb-20 md:mb-32">
+          <h2 className="text-display text-4xl md:text-6xl leading-[0.95] text-balance">
             Um documentário<br />
             <span className="text-editorial text-foreground/50">em andamento.</span>
           </h2>
