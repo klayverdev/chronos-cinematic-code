@@ -180,3 +180,13 @@
     text-orientation: mixed;
   }
 }
+
+@media (min-width: 768px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+  section[id] {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
