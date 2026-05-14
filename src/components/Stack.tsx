@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
+import type { IconType } from "react-icons";
 import {
-  Braces,
-  Server,
-  Triangle,
-  Webhook,
-  Database,
-  Code2,
-  Github,
-  FileCode2,
-  Atom,
-  Moon,
-  type LucideIcon,
-} from "lucide-react";
+  SiTypescript,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiPostman,
+  SiMysql,
+  SiPython,
+  SiGithub,
+  SiJavascript,
+  SiReact,
+  SiLua,
+} from "react-icons/si";
 
-type Tech = { n: string; d: string; Icon: LucideIcon };
+type Tech = { n: string; d: string; Icon: IconType };
 
 const tech: Tech[] = [
-  { n: "TypeScript", d: "Desenvolvimento com tipagem", Icon: Braces },
-  { n: "Node.js", d: "Sistemas de runtime backend", Icon: Server },
-  { n: "Next.js", d: "Arquitetura full-stack moderna", Icon: Triangle },
-  { n: "APIs", d: "Sistemas RESTful e integrações", Icon: Webhook },
-  { n: "Databases", d: "MySQL · Supabase", Icon: Database },
-  { n: "Python", d: "Automação e construção de lógica", Icon: Code2 },
-  { n: "GitHub", d: "Controle de versão e colaboração", Icon: Github },
-  { n: "JavaScript", d: "Fundamentos web", Icon: FileCode2 },
-  { n: "React", d: "Interfaces interativas modernas", Icon: Atom },
-  { n: "Lua", d: "Sistemas de jogo e scripting", Icon: Moon },
+  { n: "TypeScript", d: "Desenvolvimento com tipagem", Icon: SiTypescript },
+  { n: "Node.js", d: "Sistemas de runtime backend", Icon: SiNodedotjs },
+  { n: "Next.js", d: "Arquitetura full-stack moderna", Icon: SiNextdotjs },
+  { n: "APIs", d: "Sistemas RESTful e integrações", Icon: SiPostman },
+  { n: "Databases", d: "MySQL · Supabase", Icon: SiMysql },
+  { n: "Python", d: "Automação e construção de lógica", Icon: SiPython },
+  { n: "GitHub", d: "Controle de versão e colaboração", Icon: SiGithub },
+  { n: "JavaScript", d: "Fundamentos web", Icon: SiJavascript },
+  { n: "React", d: "Interfaces interativas modernas", Icon: SiReact },
+  { n: "Lua", d: "Sistemas de jogo e scripting", Icon: SiLua },
 ];
 
 export function Stack() {
@@ -64,10 +64,7 @@ export function Stack() {
                   /{String(i + 1).padStart(2, "0")}
                 </div>
                 <div className="relative">
-                  <Icon
-                    strokeWidth={1.25}
-                    className="w-12 h-12 md:w-14 md:h-14 text-foreground/80 mb-4 group-hover:text-foreground group-hover:scale-110 transition-all duration-500 origin-left"
-                  />
+                  <Icon className="w-10 h-10 md:w-12 md:h-12 text-foreground/80 mb-4 group-hover:text-foreground group-hover:scale-110 transition-all duration-500 origin-left" />
                   <div className="font-mono text-xs md:text-sm tracking-[0.1em] uppercase text-foreground mb-1">
                     {t.n}
                   </div>

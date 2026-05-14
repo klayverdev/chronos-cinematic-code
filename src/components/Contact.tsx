@@ -62,11 +62,11 @@ export function Contact() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0_0_0/0.95)_100%)]" />
 
       <div className="relative px-6 md:px-10 grid grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50">
+        <div className="col-span-12 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50 mb-8 md:mb-0">
           06 Créditos Finais
         </div>
 
-        <div className="col-span-12 md:col-span-6">
+        <div className="col-span-12 md:col-span-6 mt-6 md:mt-0">
           <h2 className="text-display text-6xl md:text-8xl leading-[0.85] mb-8 text-balance">
             Vamos construir<br />
             <span className="text-editorial text-foreground/60">algo significativo.</span>
