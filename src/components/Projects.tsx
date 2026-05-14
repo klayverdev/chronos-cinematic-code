@@ -48,11 +48,11 @@ export function Projects() {
   return (
     <section id="work" className="relative bg-background py-32 md:py-48 border-t border-hairline">
       <div className="px-6 md:px-10">
+        <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50 mb-12 md:mb-20">
+          04 Trabalhos Selecionados
+        </div>
         <div className="mb-20 grid grid-cols-12 gap-6 items-end">
-          <div className="col-span-12 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50">
-            04 Trabalhos Selecionados
-          </div>
-          <h2 className="col-span-12 md:col-span-7 text-display text-5xl md:text-7xl leading-[0.9] text-balance">
+          <h2 className="col-span-12 md:col-span-9 text-display text-4xl md:text-6xl leading-[0.95] text-balance">
             Projetos construídos<br />
             <span className="text-editorial text-foreground/50">através da evolução.</span>
           </h2>
