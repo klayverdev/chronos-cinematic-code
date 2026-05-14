@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 export function About() {
   return (
     <section id="about" className="relative bg-background py-32 md:py-48 overflow-hidden">
-      <div className="grid grid-cols-12 gap-6 px-6 md:px-10">
-        <div className="col-span-12 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50">
+      <div className="px-6 md:px-10">
+        <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/50 mb-12 md:mb-20">
           02 Identity
         </div>
-
-        <div className="col-span-12 md:col-span-5 relative">
+      </div>
+      <div className="grid grid-cols-12 gap-6 px-6 md:px-10">
+        <div className="col-span-12 md:col-span-5 md:col-start-2 relative">
           <motion.div
             initial={{ opacity: 0, scale: 1.05 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -39,7 +40,7 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-editorial text-4xl md:text-6xl leading-[1.05] mb-8 text-balance"
+            className="text-editorial text-3xl md:text-5xl leading-[1.05] mb-8 text-balance"
           >
             Uma obsessão silenciosa por aprendizado, sistemas e evolução constante.
           </motion.h2>
