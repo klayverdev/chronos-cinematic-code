@@ -14,7 +14,7 @@ export function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-            className="relative aspect-[3/4] max-w-[320px] mx-auto overflow-hidden border border-hairline"
+            className="relative aspect-[3/4] max-w-[460px] mx-auto overflow-hidden border border-hairline"
           >
             <video
               autoPlay
