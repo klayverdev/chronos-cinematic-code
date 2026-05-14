@@ -72,12 +72,12 @@ export function About() {
             key={s.k}
             className="bg-background p-5 md:p-6"
          >
-        <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/40 mb-3 flex items-center gap-2">
+        <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-foreground/40 mb-3 flex items-center gap-3">
         <span>/{String(i + 1).padStart(2, "0")}</span>
         <span>{s.k}</span>
       </div>
 
-      <div className="text-display text-2xl md:text-3xl leading-[1.05] tracking-[-0.04em] text-foreground break-words">
+      <div className="text-display text-xl md:text-2xl leading-[1.15] tracking-[-0.02em] text-foreground break-words">
         {s.v}
       </div>
           </div>
