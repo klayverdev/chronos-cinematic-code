@@ -27,10 +27,13 @@ export function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
   const [errors, setErrors] = useState<FieldErrors>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setSubmitError(null);
 
     const result = contactSchema.safeParse({ name, email, message });
     if (!result.success) {
@@ -44,13 +47,30 @@ export function Contact() {
     }
 
     setErrors({});
-    const data = result.data;
-    const subject = encodeURIComponent(`Contato do portfólio - ${data.name}`);
-    const body = encodeURIComponent(
-      `Nome: ${data.name}\nE-mail: ${data.email}\n\nMensagem:\n${data.message}`,
-    );
-    window.location.href = `mailto:klayver261@gmail.com?subject=${subject}&body=${body}`;
-    setSent(true);
+    setSending(true);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/klayver261@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: result.data.name,
+          email: result.data.email,
+          message: result.data.message,
+          _subject: `Contato do portfólio - ${result.data.name}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
+      if (!response.ok) throw new Error("Falha no envio");
+      setSent(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch {
+      setSubmitError("Não foi possível enviar agora. Tente novamente em instantes.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
