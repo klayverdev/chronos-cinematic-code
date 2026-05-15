@@ -95,14 +95,6 @@ export function Contact() {
             Aberto a oportunidades, colaborações e experiências envolvendo sistemas backend, aplicações web e projetos de engenharia de software.
           </p>
 
-          <a
-            href="mailto:klayver261@gmail.com"
-            className="group inline-flex items-center gap-4 border border-foreground/40 hover:border-foreground px-6 py-4 font-mono text-xs tracking-[0.3em] uppercase text-foreground transition-colors mb-12"
-          >
-            <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
-            Entre em contato
-            <span className="group-hover:translate-x-1 transition-transform">↗</span>
-          </a>
 
           <div className="space-y-4 font-mono text-sm">
             <a
