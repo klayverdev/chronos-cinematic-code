@@ -185,19 +185,13 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              disabled={sending}
-              className="group relative w-full mt-4 border border-foreground/40 hover:border-foreground py-3 font-mono text-xs tracking-[0.3em] uppercase overflow-hidden disabled:opacity-60 disabled:cursor-not-allowed"
+              className="group relative w-full mt-4 border border-foreground/40 hover:border-foreground py-3 font-mono text-xs tracking-[0.3em] uppercase overflow-hidden"
             >
               <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               <span className="relative group-hover:text-background transition-colors duration-500">
-                {sending ? "Enviando..." : sent ? "● SINAL ENVIADO" : "Vamos conversar"}
+                {sent ? "● SINAL ENVIADO" : "Vamos conversar"}
               </span>
             </button>
-            {submitError && (
-              <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-destructive pt-2">
-                {submitError}
-              </p>
-            )}
           </motion.form>
         </div>
       </div>
