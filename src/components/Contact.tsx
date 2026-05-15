@@ -27,13 +27,10 @@ export function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
   const [errors, setErrors] = useState<FieldErrors>({});
-  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSubmitError(null);
 
     const result = contactSchema.safeParse({ name, email, message });
     if (!result.success) {
@@ -47,30 +44,13 @@ export function Contact() {
     }
 
     setErrors({});
-    setSending(true);
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/klayver261@gmail.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name: result.data.name,
-          email: result.data.email,
-          message: result.data.message,
-          _subject: `Contato do portfólio - ${result.data.name}`,
-          _template: "table",
-          _captcha: "false",
-        }),
-      });
-      if (!response.ok) throw new Error("Falha no envio");
-      setSent(true);
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch {
-      setSubmitError("Não foi possível enviar agora. Tente novamente em instantes.");
-    } finally {
-      setSending(false);
-    }
+    const data = result.data;
+    const subject = encodeURIComponent(`Contato do portfólio - ${data.name}`);
+    const body = encodeURIComponent(
+      `Nome: ${data.name}\nE-mail: ${data.email}\n\nMensagem:\n${data.message}`,
+    );
+    window.location.href = `mailto:klayver261@gmail.com?subject=${subject}&body=${body}`;
+    setSent(true);
   };
 
   return (
@@ -95,14 +75,6 @@ export function Contact() {
             Aberto a oportunidades, colaborações e experiências envolvendo sistemas backend, aplicações web e projetos de engenharia de software.
           </p>
 
-          <a
-            href="mailto:klayver261@gmail.com"
-            className="group inline-flex items-center gap-4 border border-foreground/40 hover:border-foreground px-6 py-4 font-mono text-xs tracking-[0.3em] uppercase text-foreground transition-colors mb-12"
-          >
-            <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
-            Entre em contato
-            <span className="group-hover:translate-x-1 transition-transform">↗</span>
-          </a>
 
           <div className="space-y-4 font-mono text-sm">
             <a
@@ -213,19 +185,13 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              disabled={sending}
-              className="group relative w-full mt-4 border border-foreground/40 hover:border-foreground py-3 font-mono text-xs tracking-[0.3em] uppercase overflow-hidden disabled:opacity-60 disabled:cursor-not-allowed"
+              className="group relative w-full mt-4 border border-foreground/40 hover:border-foreground py-3 font-mono text-xs tracking-[0.3em] uppercase overflow-hidden"
             >
               <span className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               <span className="relative group-hover:text-background transition-colors duration-500">
-                {sending ? "Enviando..." : sent ? "● SINAL ENVIADO" : "Vamos conversar"}
+                {sent ? "● SINAL ENVIADO" : "Vamos conversar"}
               </span>
             </button>
-            {submitError && (
-              <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-destructive pt-2">
-                {submitError}
-              </p>
-            )}
           </motion.form>
         </div>
       </div>
