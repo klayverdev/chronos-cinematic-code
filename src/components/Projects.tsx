@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -97,15 +96,6 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.25em] uppercase text-foreground/80 hover:text-foreground border-b border-hairline hover:border-foreground pb-1 transition-colors"
-                >
-                  {p.linkLabel}
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </a>
               </div>
               <div className="col-span-12 md:col-span-7">
                 <div className="relative bg-card border border-hairline overflow-hidden">
